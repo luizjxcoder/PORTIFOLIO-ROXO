@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Portfólio Developer | Luiz Alberto Silva</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+     <style>
+          /* Estilo base para o body */
+          body {
+               background-color: #040615;
+               color: #FFFFFF;
+               font-family: 'Space Grotesk', sans-serif;
+          }
+
+          /* Classes de Animação */
+          .slide-in {
+               opacity: 0;
+               transform: translateY(50px);
+               transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+          }
+
+          .slide-in.visible {
+               opacity: 1;
+               transform: translateY(0);
+          }
+
+          .card-hover {
+               transition: transform 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
+          }
+
+          .card-hover:hover {
+               transform: translateY(-5px);
+               box-shadow: 0 10px 15px -3px rgba(122, 92, 255, 0.3), 0 4px 6px -4px rgba(122, 92, 255, 0.3);
+               scale: 1.03;
+          }
+
+          .icon-hover {
+               transition: transform 0.2s ease-in-out;
+          }
+
+          .icon-hover:hover {
+               transform: scale(1.2);
+          }
+     </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+     <header class="bg-[#040615]/80 backdrop-blur-sm sticky top-0 z-50">
+          <nav class="container mx-auto px-4 md:px-8 flex justify-between items-center py-4">
+               <a href="#" class="text-2xl font-bold text-white">Ian Silva</a>
+
+               <div id="desktop-menu" class="hidden md:flex items-center space-x-6">
+                    <a href="#sobre"
+                         class="text-slate-300 hover:text-[#7A5CFF] transition-colors duration-300">Sobre</a>
+                    <a href="#experiencias"
+                         class="text-slate-300 hover:text-[#7A5CFF] transition-colors duration-300">Experiências</a>
+                    <a href="#projetos"
+                         class="text-slate-300 hover:text-[#7A5CFF] transition-colors duration-300">Projetos</a>
+                    <a href="#contato"
+                         class="bg-[#7A5CFF] text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition-all duration-300">Contato</a>
+               </div>
+
+               <button id="menu-button" class="md:hidden text-white text-2xl">
+                    <i class="fas fa-bars"></i>
+               </button>
+          </nav>
+
+          <div id="mobile-menu" class="hidden md:hidden bg-[#1f1a3d] p-4">
+               <a href="#sobre" class="block text-slate-200 py-2 hover:text-[#7A5CFF]">Sobre</a>
+               <a href="#experiencias" class="block text-slate-200 py-2 hover:text-[#7A5CFF]">Experiências</a>
+               <a href="#projetos" class="block text-slate-200 py-2 hover:text-[#7A5CFF]">Projetos</a>
+               <a href="#contato"
+                    class="block bg-[#7A5CFF] text-white mt-2 px-4 py-2 rounded-md text-center hover:bg-opacity-90">Contato</a>
+          </div>
+     </header>
+
+     <main class="container mx-auto px-4 md:px-8 py-12">
+
+          <section id="sobre" class="mb-24 pt-16">
+               <div class="flex flex-col md:flex-row items-center slide-in">
+                    <div class="md:w-3/5">
+                         <h2 class="text-4xl md:text-5xl font-bold text-[#7A5CFF] mb-4">Ajudando empresas a construírem
+                              produtos digitais de forma moderna e de alta qualidade.</h2>
+                         <p class="text-lg text-slate-300">Uma mistura de Design, Desenvolvimento Frontend e paixão por
+                              criar experiências de usuário memoráveis.</p>
+                    </div>
+                    <div class="md:w-2/5 flex justify-center mt-8 md:mt-0">
+                         <span class="text-9xl text-[#7A5CFF] font-mono opacity-30">{ }</span>
+                    </div>
+               </div>
+
+               <div class="flex flex-col md:flex-row items-center mt-20 slide-in">
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                         <img src="https://i.ibb.co/W2zGY14/developer-image.png"
+                              alt="Foto de Ian Silva em seu setup de desenvolvimento"
+                              class="rounded-lg shadow-lg shadow-[#7A5CFF]/20 w-full max-w-sm mx-auto">
+                    </div>
+                    <div class="md:w-2/3 md:pl-12">
+                         <h3 class="text-3xl font-bold mb-3">Ian Silva</h3>
+                         <p class="text-slate-300 mb-4">Desenvolvedor Frontend com foco em criar interfaces ricas e
+                              interativas. Minha paixão é transformar ideias complexas em designs simples e intuitivos,
+                              utilizando as tecnologias mais modernas do mercado.</p>
+                         <div class="flex space-x-4 text-2xl text-[#7A5CFF]">
+                              <a href="#" class="hover:text-white transition-colors icon-hover"><i
+                                        class="fab fa-github"></i></a>
+                              <a href="#" class="hover:text-white transition-colors icon-hover"><i
+                                        class="fab fa-linkedin"></i></a>
+                              <a href="#" class="hover:text-white transition-colors icon-hover"><i
+                                        class="fab fa-instagram"></i></a>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section id="experiencias" class="mb-24 pt-16">
+               <h2 class="text-4xl font-bold mb-12 slide-in">Experiências</h2>
+               <div class="border-l-2 border-[#7A5CFF] pl-8 relative">
+
+                    <div class="mb-12 slide-in relative">
+                         <div
+                              class="absolute -left-[42px] top-1 w-5 h-5 bg-[#7A5CFF] rounded-full border-4 border-[#040615]">
+                         </div>
+                         <p class="text-sm text-[#7A5CFF] mb-1">MAI 2023 - O momento</p>
+                         <h3 class="text-xl font-bold mb-2">Frontend Developer na Codar.io</h3>
+                         <p class="text-slate-300">Desenvolvimento de interfaces e sistemas web, com foco em React,
+                              Vue.js e na criação de componentes reutilizáveis para diversas aplicações.</p>
+                    </div>
+
+                    <div class="mb-12 slide-in relative">
+                         <div
+                              class="absolute -left-[42px] top-1 w-5 h-5 bg-[#7A5CFF] rounded-full border-4 border-[#040615]">
+                         </div>
+                         <p class="text-sm text-[#7A5CFF] mb-1">JAN 2022 - ABR 2023</p>
+                         <h3 class="text-xl font-bold mb-2">Desenvolvedor Web na Tech Solutions</h3>
+                         <p class="text-slate-300">Manutenção e desenvolvimento de novas features para websites
+                              institucionais e e-commerces em WordPress e outras plataformas.</p>
+                    </div>
+
+                    <div class="mb-12 slide-in relative">
+                         <div
+                              class="absolute -left-[42px] top-1 w-5 h-5 bg-[#7A5CFF] rounded-full border-4 border-[#040615]">
+                         </div>
+                         <p class="text-sm text-[#7A5CFF] mb-1">JUL 2021 - DEZ 2021</p>
+                         <h3 class="text-xl font-bold mb-2">UI/UX Designer (Freelancer)</h3>
+                         <p class="text-slate-300">Criação de protótipos de alta fidelidade e design systems para
+                              startups, utilizando Figma para garantir consistência e escalabilidade visual.</p>
+                    </div>
+
+                    <div class="mb-12 slide-in relative">
+                         <div
+                              class="absolute -left-[42px] top-1 w-5 h-5 bg-[#7A5CFF] rounded-full border-4 border-[#040615]">
+                         </div>
+                         <p class="text-sm text-[#7A5CFF] mb-1">MAR 2021 - JUN 2021</p>
+                         <h3 class="text-xl font-bold mb-2">Estagiário Frontend na Web Agency</h3>
+                         <p class="text-slate-300">Primeiro contato com o mercado, auxiliando na criação de landing
+                              pages com HTML, CSS e JavaScript puro, com foco em responsividade.</p>
+                    </div>
+
+                    <div class="mb-12 slide-in relative">
+                         <div
+                              class="absolute -left-[42px] top-1 w-5 h-5 bg-[#7A5CFF] rounded-full border-4 border-[#040615]">
+                         </div>
+                         <p class="text-sm text-[#7A5CFF] mb-1">2020</p>
+                         <h3 class="text-xl font-bold mb-2">Projeto Pessoal - Blog de Tecnologia</h3>
+                         <p class="text-slate-300">Desenvolvimento de um blog pessoal do zero com Next.js e Markdown
+                              para aprofundar conhecimentos em React e SEO.</p>
+                    </div>
+
+                    <div class="slide-in relative">
+                         <div
+                              class="absolute -left-[42px] top-1 w-5 h-5 bg-[#7A5CFF] rounded-full border-4 border-[#040615]">
+                         </div>
+                         <p class="text-sm text-[#7A5CFF] mb-1">2019</p>
+                         <h3 class="text-xl font-bold mb-2">Estudos Iniciais em Lógica de Programação</h3>
+                         <p class="text-slate-300">Início da jornada na programação com cursos de lógica, algoritmos e
+                              estruturas de dados usando Python e JavaScript.</p>
+                    </div>
+               </div>
+          </section>
+
+          <section id="projetos" class="mb-24 pt-16">
+               <h2 class="text-4xl font-bold mb-8 slide-in">Projetos</h2>
+               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#30235D] rounded-lg overflow-hidden card-hover relative group slide-in">
+                         <img src="https://i.ibb.co/f2c9p0G/projeto1.png" alt="Projeto Instabuy"
+                              class="w-full h-48 object-cover transition-opacity duration-300 group-hover:opacity-80">
+                         <div
+                              class="absolute inset-0 bg-[#7A5CFF] opacity-0 group-hover:opacity-10 transition-opacity duration-300">
+                         </div>
+                         <div class="p-6">
+                              <h3 class="text-xl font-bold mb-2">Instabuy</h3>
+                              <p class="text-slate-300">Website e-commerce focado em supermercados, totalmente
+                                   responsivo.</p>
+                         </div>
+                    </div>
+                    <div class="bg-[#30235D] rounded-lg overflow-hidden card-hover relative group slide-in">
+                         <img src="https://i.ibb.co/tZ5Xg6q/projeto2.png" alt="Projeto Naped"
+                              class="w-full h-48 object-cover transition-opacity duration-300 group-hover:opacity-80">
+                         <div
+                              class="absolute inset-0 bg-[#7A5CFF] opacity-0 group-hover:opacity-10 transition-opacity duration-300">
+                         </div>
+                         <div class="p-6">
+                              <h3 class="text-xl font-bold mb-2">Naped</h3>
+                              <p class="text-slate-300">Plataforma de streaming e notícias do mundo geek, com design
+                                   moderno.</p>
+                         </div>
+                    </div>
+                    <div class="bg-[#30235D] rounded-lg overflow-hidden card-hover relative group slide-in">
+                         <img src="https://i.ibb.co/q0VvQd2/projeto3.png" alt="Projeto de um jogo"
+                              class="w-full h-48 object-cover transition-opacity duration-300 group-hover:opacity-80">
+                         <div
+                              class="absolute inset-0 bg-[#7A5CFF] opacity-0 group-hover:opacity-10 transition-opacity duration-300">
+                         </div>
+                         <div class="p-6">
+                              <h3 class="text-xl font-bold mb-2">Red Dead Page</h3>
+                              <p class="text-slate-300">Landing page conceitual para o jogo Red Dead Redemption 2.</p>
+                         </div>
+                    </div>
+               </div>
+          </section>
+
+          <section id="servicos" class="mb-24 pt-16">
+               <h2 class="text-4xl font-bold mb-8 slide-in">Serviços</h2>
+               <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-[#30235D] p-6 rounded-lg card-hover slide-in">
+                         <i class="fas fa-palette text-4xl text-[#7A5CFF] mb-4"></i>
+                         <h3 class="text-xl font-bold mb-2">UI/UX Design</h3>
+                         <p class="text-slate-300">Criação de interfaces bonitas, intuitivas e que proporcionam a melhor
+                              experiência ao usuário.</p>
+                    </div>
+                    <div class="bg-[#30235D] p-6 rounded-lg card-hover slide-in">
+                         <i class="fas fa-code text-4xl text-[#7A5CFF] mb-4"></i>
+                         <h3 class="text-xl font-bold mb-2">Desenvolvimento Web</h3>
+                         <p class="text-slate-300">Desenvolvimento de sites e aplicações web responsivas, rápidas e
+                              otimizadas.</p>
+                    </div>
+                    <div class="bg-[#30235D] p-6 rounded-lg card-hover slide-in">
+                         <i class="fas fa-mobile-alt text-4xl text-[#7A5CFF] mb-4"></i>
+                         <h3 class="text-xl font-bold mb-2">Sites Institucionais</h3>
+                         <p class="text-slate-300">Criação de websites completos para empresas que desejam marcar
+                              presença online.</p>
+                    </div>
+               </div>
+          </section>
+
+          <section id="conhecimentos" class="mb-24 pt-16">
+               <h2 class="text-4xl font-bold mb-8 slide-in">Conhecimentos</h2>
+               <div class="flex flex-wrap justify-center items-center gap-8 text-5xl text-slate-300 slide-in">
+                    <i class="fab fa-figma hover:text-white transition-colors icon-hover" title="Figma"></i>
+                    <i class="fab fa-js-square hover:text-white transition-colors icon-hover" title="JavaScript"></i>
+                    <i class="fab fa-react hover:text-white transition-colors icon-hover" title="React"></i>
+                    <i class="fab fa-vuejs hover:text-white transition-colors icon-hover" title="Vue.js"></i>
+                    <i class="fab fa-node-js hover:text-white transition-colors icon-hover" title="Node.js"></i>
+                    <svg class="h-12 w-12 icon-hover" fill="#7A5CFF" viewBox="0 0 54 33"
+                         xmlns="http://www.w3.org/2000/svg" title="Tailwind CSS">
+                         <path d="M13.5 0C6.042 0 0 6.042 0 13.5s6.042 13.5 13.5 13.5c1.743 0 3.424-.336 4.968-1.008.336.672.756 1.26 1.26 1.764.252.252.504.504.756.756a3.374 3.374 0 004.752 0c.336-.336.588-.756.756-1.176.252.084.504.168.756.168a3.375 3.375 0 003.36-3.36c0-.504-.084-.924-.168-1.428.42-.168.84-.42 1.176-.756a3.375 3.375 0 000-4.752.92.92 0 01-.168-.168c-.336-.336-.672-.672-.924-1.092A13.435 13.435 0 0027 13.5C27 6.042 20.958 0 13.5 0zm0 3.36c5.544 0 10.08 4.536 10.08 10.08S19.044 23.64 13.5 23.64 3.42 19.104 3.42 13.5 7.956 3.36 13.5 3.36zM40.5 0C33.042 0 27 6.042 27 13.5S33.042 27 40.5 27c1.743 0 3.424-.336 4.968-1.008.336.672.756 1.26 1.26 1.764.252.252.504.504.756.756a3.374 3.374 0 004.752 0c.336-.336.588-.756.756-1.176.252.084.504.168.756.168a3.375 3.375 0 003.36-3.36c0-.504-.084-.924-.168-1.428.42-.168.84-.42 1.176-.756a3.375 3.375 0 000-4.752.92.92 0 01-.168-.168c-.336-.336-.672-.672-.924-1.092A13.435 13.435 0 0054 13.5C54 6.042 47.958 0 40.5 0zm0 3.36c5.544 0 10.08 4.536 10.08 10.08S46.044 23.64 40.5 23.64 30.42 19.104 30.42 13.5 34.956 3.36 40.5 3.36z"
+                              fill="currentColor"></path>
+                    </svg>
+                    <svg class="h-11 w-11 icon-hover" fill="currentColor" viewBox="0 0 128 128"
+                         xmlns="http://www.w3.org/2000/svg" title="TypeScript">
+                         <path
+                              d="M54.6 88.6H41.4V49.3h27.3v10.9H54.6v6.9h12.4v10.6H54.6v10.9zm29-39.3h14.8v39.3h12.5V38.4h-39.8v10.9h12.5v28.4z">
+                         </path>
+                         <path
+                              d="M116 0H12C5.4 0 0 5.4 0 12v104c0 6.6 5.4 12 12 12h104c6.6 0 12-5.4 12-12V12c0-6.6-5.4-12-12-12zm-5.4 110.1c0 1.9-1.5 3.4-3.4 3.4H15.9c-1.9 0-3.4-1.5-3.4-3.4V17.9c0-1.9 1.5-3.4 3.4-3.4h91.3c1.9 0 3.4 1.5 3.4 3.4v92.2z">
+                         </path>
+                    </svg>
+               </div>
+          </section>
+
+     </main>
+
+     <footer id="contato" class="border-t border-slate-800 pt-16">
+          <div class="container mx-auto px-4 md:px-8 text-center">
+               <h2 class="text-3xl font-bold mb-4 slide-in">Vamos nos Conectar</h2>
+               <p class="text-slate-300 max-w-xl mx-auto mb-8 slide-in">Estou sempre aberto a novas oportunidades e
+                    colaborações. Sinta-se à vontade para entrar em contato através das minhas redes sociais.</p>
+
+               <div class="flex justify-center space-x-6 text-3xl text-[#7A5CFF] mb-8 slide-in">
+                    <a href="#" class="hover:text-white transition-colors icon-hover" title="GitHub"><i
+                              class="fab fa-github"></i></a>
+                    <a href="#" class="hover:text-white transition-colors icon-hover" title="LinkedIn"><i
+                              class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-white transition-colors icon-hover" title="Instagram"><i
+                              class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white transition-colors icon-hover" title="Twitter/X"><i
+                              class="fab fa-twitter"></i></a>
+               </div>
+
+               <div class="border-t border-slate-800 py-6 mt-12">
+                    <p class="text-slate-400 text-sm slide-in">© 2025 Luiz Albert Silva. Todos os direitos reservados.
+                    </p>
+               </div>
+          </div>
+     </footer>
+
+     <script>
+          document.addEventListener("DOMContentLoaded", function () {
+
+               // Animação de Slide-in ao rolar a página
+               const slideInElems = document.querySelectorAll('.slide-in');
+
+               const observerOptions = {
+                    root: null, // viewport
+                    rootMargin: '0px',
+                    threshold: 0.1 // Ativa quando 10% do elemento está visível
+               };
+
+               const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                         if (entry.isIntersecting) {
+                              entry.target.classList.add('visible');
+                              observer.unobserve(entry.target); // Anima apenas uma vez
+                         }
+                    });
+               }, observerOptions);
+
+               slideInElems.forEach(elem => {
+                    observer.observe(elem);
+               });
+
+               // --- LÓGICA DO MENU MOBILE ---
+               const menuButton = document.getElementById('menu-button');
+               const mobileMenu = document.getElementById('mobile-menu');
+
+               menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    // Alterna o ícone do botão
+                    const icon = menuButton.querySelector('i');
+                    if (mobileMenu.classList.contains('hidden')) {
+                         icon.classList.remove('fa-times');
+                         icon.classList.add('fa-bars');
+                    } else {
+                         icon.classList.remove('fa-bars');
+                         icon.classList.add('fa-times');
+                    }
+               });
+
+               // Opcional: Fechar o menu ao clicar em um link
+               const menuLinks = mobileMenu.querySelectorAll('a');
+               menuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                         mobileMenu.classList.add('hidden');
+                         const icon = menuButton.querySelector('i');
+                         icon.classList.remove('fa-times');
+                         icon.classList.add('fa-bars');
+                    });
+               });
+          });
+     </script>
+</body>
+
+</html>
